@@ -1,0 +1,204 @@
+body, html {
+    height: 100%;
+  }
+* {
+
+}
+
+.icon-logo{
+    max-width: 100%;
+  height: auto;
+}
+.circle {
+    border-radius: 50%;
+    width: 100%;
+    /* height: 228px; */
+    position: relative;
+    /* top: 72px; */
+    transition: all .3s;
+  }
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.img-header{
+    width: 100%;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.background-header{
+    /* background-image: url("../assets/image/bg_game_1.png");
+    background-size: 100%;
+    height: 100%;
+    background-repeat: no-repeat; */
+    position: relative;
+    padding: 0!important;
+}
+.content-center{
+    /* position: absolute; */
+    position: relative;
+    /* top: 50%; */
+    /* top: 80%; */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.content-center p{
+    position: absolute;
+    top: 12%;
+    left: 44%;
+    font-size: 30px;
+}
+.input-search{
+    box-sizing: border-box;
+    /* width: 600px;
+    height: 40px; */
+    width: 42%;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #81D4FA;
+    padding: 12px;
+}
+.btn-search{
+    /* top: 51%;
+    position: absolute; */
+    box-sizing: border-box;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    background: #0277BD;
+}
+.search{
+    margin: 22px 0;
+    display: flex;
+    justify-content: center;
+}
+.sex{
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    background:white
+}
+.img-btn{
+    padding:10px;
+    background:white
+}
+
+.background-navbar{
+    background: rgba(128, 216, 255, 0.1);
+}
+ 
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+BODY CONTENT
+*/
+.story-update{
+    margin:40px 0;
+}
+.content{
+    margin-top: 40px;
+}
+.title{
+    /* Truyện mới cập nhật */
+
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    color: #0277BD;
+
+}
+
+.see-more{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    color: #EF5350;
+    text-align:end
+}
+.detail-story{
+    font-size: 14px;
+    color:#999999
+}
+.detail-story p{
+    margin: 0;
+}
+.name-story{
+    color: black;
+    font-size: 16px;
+}
+.clone-content{
+    margin: 20px;
+}
+.story-update .row{
+    --bs-gutter-x:none!important;
+}
+.image-story{
+    width: 90%;
+}
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 5 breakpoints
+*/
+ 
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+ 
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+    .centered{
+        font-size: 9px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .icon-logo {
+        max-width: 10%;
+        height: auto;
+    }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+ 
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+ 
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+ 
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {  
+    
+}
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+ 
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+ 
+}
