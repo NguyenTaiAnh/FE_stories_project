@@ -20,11 +20,14 @@ body, html {
 .centered {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 49.8%;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-size: 26px;
+    font-weight: 500;
 }
 .img-header{
+    /* border: 10px solid rgb(244, 96, 96); */
     width: 100%;
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
@@ -35,18 +38,20 @@ body, html {
     background-repeat: no-repeat; */
     position: relative;
     padding: 0!important;
+    /* height: 100%; */
 }
 .content-center{
-    /* position: absolute; */
-    position: relative;
-    /* top: 50%; */
+    /* border: 8px solid blueviolet; */
+    position: absolute;
+    /* position: relative; */
+    top: 50%;
     /* top: 80%; */
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* top: -25%; */
+    /* left: 50%; */
+    transform: translate(0, -50%);
     text-align: center;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 .content-center p{
     position: absolute;
@@ -91,14 +96,24 @@ body, html {
 .background-navbar{
     background: rgba(128, 216, 255, 0.1);
 }
- 
+ /*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+HEADER MOBILE DEVICE
+*/
+.header-mb{
+    display: none;
+}
+
+
 
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 BODY CONTENT
 */
-.story-update{
+.story{
     margin:40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #81D4FA;
 }
 .content{
     margin-top: 40px;
@@ -124,27 +139,70 @@ BODY CONTENT
     line-height: 24px;
     /* identical to box height */
     color: #EF5350;
-    text-align:end
+    text-align:end;
+    align-self: center;
 }
 .detail-story{
     font-size: 14px;
     color:#999999
 }
 .detail-story p{
-    margin: 0;
+    margin: 5px 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+
+    color: #999999;
 }
 .name-story{
-    color: black;
-    font-size: 16px;
+    color: black !important;
+    font-size: 16px !important;
 }
 .clone-content{
     margin: 20px;
 }
-.story-update .row{
+.story .row{
     --bs-gutter-x:none!important;
 }
 .image-story{
     width: 90%;
+}
+.favorite-story{
+    padding-right: 20px !important;
+}
+.most-viewed-stories{
+    padding-left: 20px !important;
+}
+.content-story{
+    color : #666666 !important;
+    line-height: 18px !important;
+    margin: 10px 0 !important;
+}
+.chap-story {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #999999;
+}
+.story-top{
+    margin-bottom: 15px !important;
+}
+.list-story{
+    margin: 5px 0!important;
+    border-bottom: 0.5px dashed #999999;
+}
+.name-story-finished{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
 }
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -155,22 +213,22 @@ Bootstrap 5 breakpoints
 Extra small devices (portrait phones, less than 576px) 
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
- 
+
+@media (max-width: 768px) {
+    .favorite-story{
+        padding-right: 0 !important;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #81D4FA;
+    }
+    .most-viewed-stories{
+        padding-top: 40px;
+        padding-left: 0 !important;
+    }
+}
  
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {  
-    .centered{
-        font-size: 9px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .icon-logo {
-        max-width: 10%;
-        height: auto;
-    }
+
 }
  
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
@@ -179,8 +237,57 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
  
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
- 
+@media (max-width: 992px) { 
+    /* .content-center {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        text-align: center;
+        width: 100%;
+    } */
+    .content-center {
+        display: none;
+    }
+    .header-mb{
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    .circle-mb{
+        position: relative;
+        height: 50px;
+    }
+    .circle-mb div {
+        position: absolute;
+        top: 50%;
+        left: 49.8%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .img-btn-mb{
+        height: 35px;
+    }
+    .sex-mb{
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        background:white
+    }
+    .icon-logo-mb{
+        height: 55px;
+    }
+    .input-search-mb{
+        display: flow-root;
+        align-self: center;
+    }
+    .btn-sex-mb{
+        display: flow-root;
+        align-self: center;
+    }
 }
  
 /* Extra large devices (large desktops, 1200px and up) */
