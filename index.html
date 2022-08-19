@@ -50,18 +50,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="form-outline input-search-mb">
-            <input type="search" id="form1" class="form-control" placeholder="Type query" aria-label="Search" />
-          </div>
-          <div class="btn-sex-mb">
-            <button class="sex-mb">
-              <img class="img-btn-mb" src="/assets/image/male.png"/>
-            </button>
-            <span style="padding:14px"></span>
-            <button class="sex-mb">
-                <img class="img-btn-mb" src="/assets/image/female.png"/>
-            </button>
-          </div> -->
         </div>
     <!-- <header> -->
         <img src="/assets/image/bg_game_1.png" class="img-header" />
@@ -71,8 +59,9 @@
                 <div class="centered">Logo</div>
             </div>
             <div class="search">
-                <input type="text" class="input-search" placeholder="Nhập tên truyện hoặc tác giả "/>
+                <input type="text" id="search" class="input-search" placeholder="Nhập tên truyện hoặc tác giả "/>
                 <button class="btn-search"><i class="fa-solid fa-magnifying-glass" style="color: white"></i></button>
+                <ul class="drop"></ul>
             </div>
             <div>
                 <button class="sex">
@@ -100,14 +89,45 @@
                   <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
                 </li> -->
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Thể Loại
+                  <a class="nav-link dropdown-toggle custom-text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Thể loại
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <ul class="dropdown-menu multi-column columns-3" aria-labelledby="navbarDropdown">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                          <li><a href="#">Tiên hiệp</a></li>
+                          <li><a href="#">Khoa huyễn</a></li>
+                          <li><a href="#">Lịch sử</a></li>
+                          <li><a href="#">Du hí</a></li>
+                          <li><a href="#" style="border: 0;">Ngôn tình</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                          <li><a href="#">Huyền huyễn</a></li>
+                          <li><a href="#">Kỳ huyễn</a></li>
+                          <li><a href="#">Đồng nhân</a></li>
+                          <li><a href="#">Canh kỵ</a></li>
+                          <li><a href="#" style="border: 0;">Nữ cường</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                          <li><a href="#">Đô thị</a></li>
+                          <li><a href="#">Võ hiệp</a></li>
+                          <li><a href="#">Quân sự</a></li>
+                          <li><a href="#">Linh dị</a></li>
+                          <li><a href="#" style="border: 0;">Đam mỹ</a></li>
+                        </ul>
+                      </div>
+                      <!-- <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p> -->
+                    </div>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -138,8 +158,8 @@
                 </li>
               </ul>
               <div class="navbar-nav ms-auto">
-                <a href="#" class="nav-item nav-link">Đăng ký</a>
-                <a href="#" class="nav-item nav-link">Đăng nhập</a>
+                <a href="#" class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Đăng ký</a>
+                <a href="#" class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Đăng nhập</a>
             </div>
               <!-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -157,8 +177,11 @@
         <div class="title-header row">
           <p class="title col-6">Truyện mới cập nhật</p>
           <p class="see-more col-6">
-            <i class="fa-solid fa-circle-plus"></i>
-            Xem thêm</p>
+            <a href="#">
+              <i class="fa-solid fa-circle-plus"></i>
+              Xem thêm
+          </a>
+          </p>
         </div>
         <div class="list-story-update row">
           <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row clone-content">
@@ -166,9 +189,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -177,9 +200,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -188,9 +211,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -199,9 +222,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -210,9 +233,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -221,9 +244,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -232,9 +255,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -243,9 +266,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -254,9 +277,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -265,9 +288,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -276,9 +299,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -287,9 +310,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -298,9 +321,9 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -309,9 +332,64 @@
               <img src="./assets/image/Rectangle_5.png" class="image-story" />
             </div>
             <div class="detail-story col-9">
-              <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-              <p>Kỳ Huyễn</p>
-              <p>Chương 4095</p>
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
+              <p>Cập nhật: 14/02/2020</p>
+            </div>
+          </div>
+          <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row clone-content">
+            <div class="content-image col-3">
+              <img src="./assets/image/Rectangle_5.png" class="image-story" />
+            </div>
+            <div class="detail-story col-9">
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
+              <p>Cập nhật: 14/02/2020</p>
+            </div>
+          </div>
+          <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row clone-content">
+            <div class="content-image col-3">
+              <img src="./assets/image/Rectangle_5.png" class="image-story" />
+            </div>
+            <div class="detail-story col-9">
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
+              <p>Cập nhật: 14/02/2020</p>
+            </div>
+          </div>
+          <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row clone-content">
+            <div class="content-image col-3">
+              <img src="./assets/image/Rectangle_5.png" class="image-story" />
+            </div>
+            <div class="detail-story col-9">
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
+              <p>Cập nhật: 14/02/2020</p>
+            </div>
+          </div>
+          <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row clone-content">
+            <div class="content-image col-3">
+              <img src="./assets/image/Rectangle_5.png" class="image-story" />
+            </div>
+            <div class="detail-story col-9">
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
+              <p>Cập nhật: 14/02/2020</p>
+            </div>
+          </div>
+          <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row clone-content">
+            <div class="content-image col-3">
+              <img src="./assets/image/Rectangle_5.png" class="image-story" />
+            </div>
+            <div class="detail-story col-9">
+              <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+              <p><a href="#">Kỳ Huyễn</a></p>
+              <p><a href="#">Chương 4095</a></p>
               <p>Cập nhật: 14/02/2020</p>
             </div>
           </div>
@@ -326,8 +404,11 @@
             <div class="title-header row">
               <p class="title col-6">Truyện mới cập nhật</p>
               <p class="see-more col-6">
-                <i class="fa-solid fa-circle-plus"></i>
-                Xem thêm</p>
+                <a href="#">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  Xem thêm
+              </a>
+              </p>
             </div>
             <div class="list-story-update row">
                 <div class="col-12 col-xs-12 col-sm-12 col-md-6 row clone-content">
@@ -335,9 +416,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -346,9 +427,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -357,9 +438,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -368,9 +449,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -379,9 +460,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -390,9 +471,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -401,9 +482,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -412,9 +493,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -423,9 +504,9 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
@@ -434,21 +515,47 @@
                     <img src="./assets/image/Rectangle_5.png" class="image-story" />
                   </div>
                   <div class="detail-story col-9">
-                    <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                    <p>Kỳ Huyễn</p>
-                    <p>Chương 4095</p>
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
                     <p>Cập nhật: 14/02/2020</p>
                   </div>
                 </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-6 row clone-content">
+                  <div class="content-image col-3">
+                    <img src="./assets/image/Rectangle_5.png" class="image-story" />
+                  </div>
+                  <div class="detail-story col-9">
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
+                    <p>Cập nhật: 14/02/2020</p>
+                  </div>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-6 row clone-content">
+                  <div class="content-image col-3">
+                    <img src="./assets/image/Rectangle_5.png" class="image-story" />
+                  </div>
+                  <div class="detail-story col-9">
+                    <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                    <p><a href="#">Kỳ Huyễn</a></p>
+                    <p><a href="#">Chương 4095</a></p>
+                    <p>Cập nhật: 14/02/2020</p>
+                  </div>
+                </div>
+                
             </div>
           </div>
           <!-- 2. truyện được xem nhiều -->
-          <div class="most-viewed-stories col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 row ">
+          <div class="most-viewed-stories col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6  ">
             <div class="title-header row">
               <p class="title col-6">Truyện mới cập nhật</p>
               <p class="see-more col-6">
-                <i class="fa-solid fa-circle-plus"></i>
-                Xem thêm</p>
+                <a href="#">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  Xem thêm
+              </a>
+              </p>
             </div>
             <div class="list-story-update row">
               <div class="col-12 col-xs-12 col-sm-12 col-md-6 row clone-content">
@@ -456,9 +563,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -467,9 +574,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -478,9 +585,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -489,9 +596,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -500,9 +607,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -511,9 +618,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -522,9 +629,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -533,9 +640,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -544,9 +651,9 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
@@ -555,12 +662,24 @@
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
                 </div>
                 <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p>Kỳ Huyễn</p>
-                  <p>Chương 4095</p>
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
                   <p>Cập nhật: 14/02/2020</p>
                 </div>
               </div>
+              <div class="col-12 col-xs-12 col-sm-12 col-md-6 row clone-content">
+                <div class="content-image col-3">
+                  <img src="./assets/image/Rectangle_5.png" class="image-story" />
+                </div>
+                <div class="detail-story col-9">
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+                  <p><a href="#">Kỳ Huyễn</a></p>
+                  <p><a href="#">Chương 4095</a></p>
+                  <p>Cập nhật: 14/02/2020</p>
+                </div>
+              </div>
+              
           </div>
           </div>
         </div>
@@ -572,11 +691,194 @@
           <p class="title-finished">Truyện mới đã hoàn thành</p>
         </div>
         <div class="finished-story row">
-          <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row st-finish">
+          <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 st-finish">
+            <div class="row">
+              <p class="category-story col-6">Tiên hiệp</p>
+              <p class="see-more col-6">
+                <a href="#">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  Xem thêm
+              </a>
+              </p>
+            </div>
+              <div class="story-top row">
+                <div class="content-image col-3">
+                  <img src="./assets/image/Rectangle_5.png" class="image-story" />
+                </div>
+                <div class="detail-story col-9">
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a></p>
+                  <p class="content-story">Sơn không tại cao, có gia thì sao. Suối không tại uyên...</p>
+                  <p><a href="#">Chương 4095</a></p>
+                </div>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+          </div>
+          <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 st-finish">
+            <div class="row">
+              <p class="category-story col-6">Tiên hiệp</p>
+              <p class="see-more col-6">
+                <a href="#">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  Xem thêm
+              </a>
+              </p>
+            </div>
+              <div class="story-top row">
+                <div class="content-image col-3">
+                  <img src="./assets/image/Rectangle_5.png" class="image-story" />
+                </div>
+                <div class="detail-story col-9">
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a></p>
+                  <p class="content-story">Sơn không tại cao, có gia thì sao. Suối không tại uyên...</p>
+                  <p><a href="#">Chương 4095</a></p>
+                </div>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+          </div>
+          <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 st-finish">
+            <div class="row">
+              <p class="category-story col-6">Tiên hiệp</p>
+              <p class="see-more col-6">
+                <a href="#">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  Xem thêm
+              </a>
+              </p>
+            </div>
+              <div class="story-top row">
+                <div class="content-image col-3">
+                  <img src="./assets/image/Rectangle_5.png" class="image-story" />
+                </div>
+                <div class="detail-story col-9">
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a></p>
+                  <p class="content-story">Sơn không tại cao, có gia thì sao. Suối không tại uyên...</p>
+                  <p><a href="#">Chương 4095</a></p>
+                </div>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+          </div>
+          <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 st-finish">
+            <div class="row">
+              <p class="category-story col-6">Tiên hiệp</p>
+              <p class="see-more col-6">
+                <a href="#">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  Xem thêm
+              </a>
+              </p>
+            </div>
+              <div class="story-top row">
+                <div class="content-image col-3">
+                  <img src="./assets/image/Rectangle_5.png" class="image-story" />
+                </div>
+                <div class="detail-story col-9">
+                  <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a></p>
+                  <p class="content-story">Sơn không tại cao, có gia thì sao. Suối không tại uyên...</p>
+                  <p><a href="#">Chương 4095</a></p>
+                </div>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+              <div class="list-story row"> 
+                <p class="name-story-finished col-8"><a href="#">Phàm Nhân Tu Tiên Chi</a></p>
+                <p class="chap-story col-4"><a href="#">Chương 1536</a></p>
+              </div>
+          </div>
+          <!-- <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row st-finish">
             <p class="category-story col-6">Tiên hiệp</p>
             <p class="see-more col-6">
-              <i class="fa-solid fa-circle-plus"></i>
-              Xem thêm</p>
+              <a href="#">
+                <i class="fa-solid fa-circle-plus"></i>
+                Xem thêm
+            </a>
+            </p>
               <div class="story-top row">
                 <div class="content-image col-3">
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
@@ -607,8 +909,11 @@
           <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row st-finish">
             <p class="category-story col-6">Tiên hiệp</p>
             <p class="see-more col-6">
-              <i class="fa-solid fa-circle-plus"></i>
-              Xem thêm</p>
+              <a href="#">
+                <i class="fa-solid fa-circle-plus"></i>
+                Xem thêm
+            </a>
+            </p>
               <div class="story-top row">
                 <div class="content-image col-3">
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
@@ -639,8 +944,11 @@
           <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row st-finish">
             <p class="category-story col-6">Tiên hiệp</p>
             <p class="see-more col-6">
-              <i class="fa-solid fa-circle-plus"></i>
-              Xem thêm</p>
+              <a href="#">
+                <i class="fa-solid fa-circle-plus"></i>
+                Xem thêm
+            </a>
+            </p>
               <div class="story-top row">
                 <div class="content-image col-3">
                   <img src="./assets/image/Rectangle_5.png" class="image-story" />
@@ -667,39 +975,7 @@
                 <p class="name-story-finished col-8" >Phàm Nhân Tu Tiên Chi</p>
                 <p class="chap-story col-4">Chương 1536</p>
               </div>
-          </div>
-          <div class="item-story-finished  col-12 col-xs-12 col-sm-12 col-md-6 col-lg-3 row st-finish">
-            <p class="category-story col-6">Tiên hiệp</p>
-            <p class="see-more col-6">
-              <i class="fa-solid fa-circle-plus"></i>
-              Xem thêm</p>
-              <div class="story-top row">
-                <div class="content-image col-3">
-                  <img src="./assets/image/Rectangle_5.png" class="image-story" />
-                </div>
-                <div class="detail-story col-9">
-                  <p class="name-story">Ngã Hữu Chư Thiên Vạn </p>
-                  <p class="content-story">Sơn không tại cao, có gia thì sao. Suối không tại uyên...</p>
-                  <p>Chương 4095</p>
-                </div>
-              </div>
-              <div class="list-story row"> 
-                <p class="name-story-finished col-8" >Phàm Nhân Tu Tiên Chi</p>
-                <p class="chap-story col-4">Chương 1536</p>
-              </div>
-              <div class="list-story row"> 
-                <p class="name-story-finished col-8" >Phàm Nhân Tu Tiên Chi</p>
-                <p class="chap-story col-4">Chương 1536</p>
-              </div>
-              <div class="list-story row"> 
-                <p class="name-story-finished col-8" >Phàm Nhân Tu Tiên Chi</p>
-                <p class="chap-story col-4">Chương 1536</p>
-              </div>
-              <div class="list-story row"> 
-                <p class="name-story-finished col-8" >Phàm Nhân Tu Tiên Chi</p>
-                <p class="chap-story col-4">Chương 1536</p>
-              </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -742,6 +1018,62 @@
     </div>
 
 
+
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Đăng nhập</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-label="selected="false">Đăng ký</button>
+          </li>
+        </ul>
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <div class="form px-4 pt-5">
+
+              <input type="text" name="" class="form-control" placeholder="Email or Phone">
+
+              <input type="text" name="" class="form-control" placeholder="Password">
+              <button class="btn btn-dark btn-block">Login</button>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <div class="form px-4">
+
+              <input type="text" name="" class="form-control" placeholder="Name">
+
+              <input type="text" name="" class="form-control" placeholder="Email">
+
+              <input type="text" name="" class="form-control" placeholder="Phone">
+
+              <input type="text" name="" class="form-control" placeholder="Password">
+
+              <button class="btn btn-dark btn-block">Signup</button>
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </body>
