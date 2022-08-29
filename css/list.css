@@ -1,0 +1,14 @@
+input{
+    width: 24px;
+    height: 24px;
+}
+input[type="checkbox"]{
+    accent-color: #EF5350;
+    
+}
+.checkbox-center{
+    display: inline-flex;
+}
+.label-custom{
+
+}
