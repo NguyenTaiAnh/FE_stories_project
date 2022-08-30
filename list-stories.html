@@ -97,29 +97,29 @@
                     <div class="row">
                       <div class="col-sm-4">
                         <ul class="multi-column-dropdown">
-                          <li><a href="#">Tiên hiệp</a></li>
-                          <li><a href="#">Khoa huyễn</a></li>
-                          <li><a href="#">Lịch sử</a></li>
-                          <li><a href="#">Du hí</a></li>
-                          <li><a href="#" style="border: 0;">Ngôn tình</a></li>
+                          <li><a href="./list-stories.html">Tiên hiệp</a></li>
+                          <li><a href="./list-stories.html">Khoa huyễn</a></li>
+                          <li><a href="./list-stories.html">Lịch sử</a></li>
+                          <li><a href="./list-stories.html">Du hí</a></li>
+                          <li><a href="./list-stories.html" style="border: 0;">Ngôn tình</a></li>
                         </ul>
                       </div>
                       <div class="col-sm-4">
                         <ul class="multi-column-dropdown">
-                          <li><a href="#">Huyền huyễn</a></li>
-                          <li><a href="#">Kỳ huyễn</a></li>
-                          <li><a href="#">Đồng nhân</a></li>
-                          <li><a href="#">Canh kỵ</a></li>
-                          <li><a href="#" style="border: 0;">Nữ cường</a></li>
+                          <li><a href="./list-stories.html">Huyền huyễn</a></li>
+                          <li><a href="./list-stories.html">Kỳ huyễn</a></li>
+                          <li><a href="./list-stories.html">Đồng nhân</a></li>
+                          <li><a href="./list-stories.html">Canh kỵ</a></li>
+                          <li><a href="./list-stories.html" style="border: 0;">Nữ cường</a></li>
                         </ul>
                       </div>
                       <div class="col-sm-4">
                         <ul class="multi-column-dropdown">
-                          <li><a href="#">Đô thị</a></li>
-                          <li><a href="#">Võ hiệp</a></li>
-                          <li><a href="#">Quân sự</a></li>
-                          <li><a href="#">Linh dị</a></li>
-                          <li><a href="#" style="border: 0;">Đam mỹ</a></li>
+                          <li><a href="./list-stories.html">Đô thị</a></li>
+                          <li><a href="./list-stories.html">Võ hiệp</a></li>
+                          <li><a href="./list-stories.html">Quân sự</a></li>
+                          <li><a href="./list-stories.html">Linh dị</a></li>
+                          <li><a href="./list-stories.html" style="border: 0;">Đam mỹ</a></li>
                         </ul>
                       </div>
                       <!-- <p class="col-4"><a href="#">Tiên hiệp</a></p>
@@ -174,7 +174,7 @@
     <!-- ---------------------------BODY------------------------- -->
     <div class="container content">
       <!-- categories -->
-      <div class="categories">
+      <div class="categories margin-space">
         <div class="row">
           <div class="col-2">
             <p>Thể loại</p>
@@ -195,7 +195,7 @@
                 <input id="test2" type="checkbox" />
                 <label for="test2">Test 2</label>
               
-                <input id="test3" type="checkbox" disabled/>
+                <input id="test3" type="checkbox"/>
                 <label for="test3">Test 3</label>
               
                 <input id="test4" type="checkbox" />
@@ -224,17 +224,330 @@
               </div>
           </div>
         </div>
+      </div>
+      <!-- filter -->
+      <div class="filter-list margin-space">
         <div class="row">
-          <div class="col-2">
+          <div class="col-2" style="align-self: center;">
+            <p style="margin: 0;">Sắp xếp:</p>
+          </div>
+          <div class="col-10">
+            <div class="new-update">
+              <label>
+                <input type="checkbox">
+                <span>Mới cập nhật</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>Truyện mới</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>Số chương</span>
+              </label>   
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- filter for chap -->
+      <div class="filter-list margin-space">
+        <div class="row">
+          <div class="col-2" style="align-self: center;">
+            <p style="margin: 0;">Lọc theo chuơng</p>
+          </div>
+          <div class="col-10">
+            <div class="new-update">
+              <label>
+                <input type="checkbox">
+                <span>Tất cả</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>&#60;300</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>300 -1000</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>1000 -2000</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>&#62;2000</span>
+              </label>   
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- status -->
+      <div class="filter-list margin-space">
+        <div class="row">
+          <div class="col-2" style="align-self: center;">
             <p>Sắp xếp:</p>
           </div>
           <div class="col-10">
             <div class="new-update">
-              <input type="checkbox" />
-              <label></label>              
+              <label>
+                <input type="checkbox">
+                <span>Đang tiến hành</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>Hoàn thành</span>
+              </label>   
+              <label>
+                <input type="checkbox">
+                <span>Tạm ngưng</span>
+              </label>   
             </div>
           </div>
         </div>
+
+      </div>
+
+      <!-- Story -->
+      <div class="list-story-update row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="./story.html">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 row clone-content">
+          <div class="content-image col-4">
+            <img src="./assets/image/Rectangle_5.png" class="image-story" />
+          </div>
+          <div class="detail-story col-8">
+            <p class="name-story"><a href="#">Ngã Hữu Chư Thiên Vạn</a> </p>
+            <p class="content-story">Địa cầu thanh niên Trần Quý Xuyên nguyên nhân tai nạn xe cộ ngoài ý...</p>
+            <div class="custom-chap-category">
+              <p style="margin-right: 10px;"><a href="#">Chương 4095</a></p>
+              <p ><a href="#">Kỳ Huyễn</a></p>
+            </div>
+            <p>Cập nhật: 14/02/2020</p>
+          </div>
+        </div>
+        
+      
+      </div>
+
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a  href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
       </div>
     </div>
 

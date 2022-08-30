@@ -28,42 +28,71 @@
   border:none;
 }
 .checkbox-center input[type="checkbox"]:disabled + label {
-    background:#f00;  
+  color: #8d8a8a;
 }​
 .checkbox-center{
     display: inline-flex;
 }
 
-.new-update input[type="checkbox"] {
-  display:none;
+
+
+.new-update label {
+    position:relative;   
+    cursor:pointer;
 }
-.new-update input[type="checkbox"] + label:before {
-    font-family: 'Roboto';
-    display:inline-block; 
-    content: 'Mới cập nhật';
-    border: 1px solid #E0E0E0;
-    display: inline-block;
-    padding: 12px 10px;
-    margin-right: 10px;
-    text-align: center;
-    color: #666666;
-    font-size: 14px;
+.new-update label [type="checkbox"] {
+    display:none;
 }
-/* .new-update input[type="checkbox"]:checked:after {
-    font-family: 'Roboto';
-    display:inline-block; 
-    content: 'Mới cập nhật';
-    border: 1px solid #EF5350;
-    display: inline-block;
-    padding: 12px 10px;
-    margin-right: 10px;
-    text-align: center;
-    color: #EF5350;
-    font-size: 14px;
-} */
-.new-update input[type="checkbox"]:checked + label:before {
-    content: "\f00c"; /* check */
-    color: white;
-    background-color: #EF5350;
-    border:none;
-  }
+.new-update [type="checkbox"] + span {
+  padding: 10px 12px;
+  border: 1px solid #E0E0E0;
+  color: #666666;
+  display: inline-block;
+}
+.new-update :checked + span {
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1px solid #EF5350;
+  color: #EF5350;   
+}
+.new-update [type="checkbox"][disabled] + span {
+  background: #666666;
+  color: #8d8a8a;
+}
+
+.margin-space{
+  margin: 10px 0;
+}
+.list-story-update .row{
+  --bs-gutter-x: none!important;
+}
+.list-story-update{
+  padding: 40px 0;
+}
+.custom-chap-category{
+  display: flex;
+}
+
+.pagination {
+  display: inline-block;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #E0E0E0;
+  margin: 0 5px;
+}
+
+.pagination a.active {
+  background: #EF5350;
+  border: 1px solid #EF5350;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
