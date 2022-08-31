@@ -1,0 +1,204 @@
+.breadcrumb a {
+    color: #7d8a94;
+    text-decoration: none;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    font-weight: bold;
+    border: 1px dashed #999999;
+    padding: 0 7px !important;
+    margin-right: 0.5rem;
+}
+.img-info{
+    float: left;
+    margin-right: 20px;
+    width: 15.2%;
+}
+.name-story-info{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+}
+.cate-info{
+    color: #0277BD;
+}
+.cate-info a{
+    color: #0277BD;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+.author-info{
+    color: #424242;
+    font-size: 15px;
+    line-height: 30px;
+}
+.author-info a{
+    color: #0277BD;
+    text-decoration: none;
+}
+.status-story{
+    color: #424242;
+    font-size: 15px;
+    line-height: 30px;
+}
+.totla-social-story{
+    display: inline-flex;
+}
+.custom-btn-info{
+    padding: 11px 14px;
+}
+.summary-story{
+    display: inline-block;
+    margin: 30px 0;
+}
+.summary-story p{
+    font-size: 15px;
+    line-height: 25px;
+    color: #424242;
+}
+.style-icon{
+    border: 1px dashed #999999;
+    color: #999999;
+    padding: 2px;
+}
+
+
+.pagination {
+    display: inline-block;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #E0E0E0;
+    margin: 0 5px;
+}
+
+.pagination a.active {
+    background: #EF5350;
+    border: 1px solid #EF5350;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.title-chapter{
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    font-weight: bold;
+    color: #0277BD;
+    margin: 0;
+}
+.custom-list ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+.custom-list ul li{
+    padding: 15px 0;
+    border-bottom: 2px solid #CCCCCC;
+}
+.custom-list ul{
+    list-style: none;
+    padding: 0 !important;
+}
+.list-chapter{
+    margin: 30px 0;
+}
+
+
+
+
+/* <!-- Wrapper for carousel items --> */
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .carousel-item {
+	/* min-height: 330px; */
+	text-align: center;
+	overflow: hidden;
+}
+
+.carousel-control-prev, .carousel-control-next {
+	height: 100px;
+	width: 40px;
+	background: none;
+	margin: auto 0;
+	background: rgba(0, 0, 0, 0.2);
+    width: 0 !important;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin: -16px 0 0 0;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: rgba(0, 0, 0, 0.8);
+	text-shadow: none;
+	font-weight: bold;
+}
+.carousel-control-prev i {
+	margin-left: -3px;
+}
+.carousel-control-next i {
+	margin-right: -3px;
+}
+
+	
+.carousel .carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border-color: transparent;
+	border: none;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.content-image{
+    padding: 0;
+    align-self: center;
+}
+.content-story-slide{
+    text-align: left;
+    align-self: center;
+    padding-left: 10px !important;
+    line-height: 32px;
+    
+}
+.content-story-slide p a{
+    text-decoration: none;
+    color: #999999;
+    font-size: 14px;
+}
+.content-story-slide p {
+    text-decoration: none;
+    color: #999999;
+    font-size: 14px;
+    margin: 0;
+}
+.carousel-item .row{
+    --bs-gutter-x: none!important;
+}
