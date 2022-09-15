@@ -256,3 +256,40 @@
   top: 25%;
   right: 0;
 }
+.avatar-custom-size{
+    border: 1px dashed #999999;
+    justify-content: center;
+    display: inline-flex;
+    width: 54px;
+}
+.avatar-cmt{
+    border-radius: 50%;
+}
+.user-cmt-1{
+    margin: 0 40px 20px;
+}
+.user-cmt-2{
+    background: #F7F7F7;
+    border-radius: 5px;
+    padding: 20px 0 4px 0;
+}
+.name-user-cmt{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom:11px
+}
+.content-user-cmt{
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom:11px
+}
+.interactive{
+    display:flex;
+    color: #EF5350;
+}
+
+.comment-box{
+    border-bottom: 1px dashed gray;
+    margin-bottom: 40px;
+}
+.user-comment-box { display:none; }

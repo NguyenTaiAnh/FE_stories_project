@@ -1,0 +1,88 @@
+.content-story{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background:#E5E4DB; 
+    margin:0 !important;
+}
+
+.title-story{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #0277BD;
+    text-align: center;
+}
+.name-author{
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    color: #424242;
+}
+.name-chapter{
+    font-size: 24px;
+    line-height: 28px;
+    color: #424242;
+    font-weight:bold;
+    text-align: center;
+}
+.content-chapter{
+    font-size: 20px;
+    line-height: 36px;
+    font-family: 'Roboto';
+    color: #333333;
+}
+
+.select-change{
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 19px;
+}
+.round-change-sizes{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #333333;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+}
+.times-font{
+  font-family: Times !important;
+}
+.roboto-font{
+  font-family: cursive !important;
+}
+.palatino-font{
+  font-family: sans-serif !important;
+}
+
+.circle-color label {
+    position:relative;   
+    cursor:pointer;
+}
+.circle-color label [type="radio"] {
+    display:none;
+    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+}
+.circle-color [type="radio"] + span {
+  padding: 10px 12px;
+  border: 1px solid #E0E0E0;
+  color: #666666;
+  display: inline-block;
+  border-radius: 50%;
+  height: 25px;
+}
+.circle-color :checked + span {
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1px solid #EF5350;
+  color: #EF5350;   
+}
+.circle-color [type="radio"][disabled] + span {
+  background: #666666;
+  color: #8d8a8a;
+}
+.color-click{
+  border-radius: 50%;
+  border: 0.5px solid #CCCCCC;
+  margin:  0 8px;
+}

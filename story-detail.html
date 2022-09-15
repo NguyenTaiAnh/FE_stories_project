@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Truyện Của Tui</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/story-detail.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
+    <link href="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        let txtFontSize = window.getComputedStyle(document.getElementById('check_size')).fontSize;
+        $("#font-size-current").text(txtFontSize.slice(0,2))
+        $('.dropdown-menu').on('click', function(e) {
+          e.stopPropagation();
+        });
+        $("#dataTable").dataTable({
+          searching: false,
+          info: true,
+          lengthChange: false,
+          responsive: true,
+          autoWidth: false,
+          /*oLanguage: {
+            oPaginate: {
+              sNext: '<i class="fas fa-angle-double-right"></i>',
+              sPrevious: '<i class="fas fa-angle-double-left"></i>'
+            }
+          },*/
+          iDisplayLength: 9,
+          //pagingType: $(window).width() < 768 ? "simple" : "simple_numbers"
+          pagingType: "numbers",
+        });
+        $(".dataTables_info").parent().css('display','none');
+        $("#dataTable_paginate").parent().removeClass("col-sm-12 col-md-7")
+
+
+        $( ".comment-box" ).each(function( index ) {
+          $(this).children(".user-comment-box").slice(-2).show();
+        });
+             
+        $(".see-more-cmt").click(function(e){ // click event for load more
+            e.preventDefault();
+            var done = $('<div class="see-more-cmt=done"></div>');
+            $(this).siblings(".user-comment-box:hidden").slice(-2).show(); // select next 5 hidden divs and show them
+            if($(this).siblings(".user-comment-box:hidden").length == 0){ // check if any hidden divs
+                $(this).replaceWith(done); // if there are none left
+            }
+        });
+
+        //change font-size
+        var min = 20;
+        var max = 50;
+    
+        function changeFontSize(delta) {
+          var tags = document.querySelectorAll('p');
+          for (i = 0; i < tags.length; i++) {
+            if (tags[i].style.fontSize) {
+              var s = parseInt(tags[i].style.fontSize.replace("px", ""));
+            } else {
+              var s = 20;
+            } if (s != max) {
+              s += delta;
+            }
+            tags[i].style.fontSize = s + "px"
+            let txtFontSize = window.getComputedStyle(document.getElementById('check_size')).fontSize;
+
+            $("#font-size-current").text(txtFontSize.slice(0,2))
+          }
+        }
+    
+        function increaseFontSize() {
+          changeFontSize(1);
+        }
+    
+        function decreaseFontSize() {
+          changeFontSize(-1);
+        }
+    
+        document.getElementById('increase-font-size').onclick = increaseFontSize;
+        document.getElementById('decrease-font-size').onclick = decreaseFontSize;
+
+        //change font
+        //change_font
+        $('input[type=radio][name=change_font]').change(function() {
+          if (this.value == 'times-font') {
+              // ...
+              console.log("times-font")
+              $('p').addClass("times-font")
+              $('p').removeClass("roboto-font")
+              $('p').removeClass("palatino-font")
+          }
+          else if (this.value == 'roboto-font') {
+              // ...
+              console.log("roboto-font")
+              $('p').removeClass("times-font")
+              $('p').addClass("roboto-font")
+              $('p').removeClass("palatino-font")
+          }
+          else if (this.value == 'palatino-font') {
+              // ...
+              console.log("palatino-font")
+              $('p').removeClass("times-font")
+              $('p').removeClass("roboto-font")
+              $('p').addClass("palatino-font")
+          }
+      });
+      
+    });
+    </script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+
+      <nav class="navbar navbar-expand-lg navbar-light background-navbar">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand ">Trang chủ</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle custom-text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Thể loại
+                  </a>
+                  <ul class="dropdown-menu multi-column columns-3" aria-labelledby="navbarDropdown">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                          <li><a href="./list-stories.html">Tiên hiệp</a></li>
+                          <li><a href="./list-stories.html">Khoa huyễn</a></li>
+                          <li><a href="./list-stories.html">Lịch sử</a></li>
+                          <li><a href="./list-stories.html">Du hí</a></li>
+                          <li><a href="./list-stories.html" style="border: 0;">Ngôn tình</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                          <li><a href="./list-stories.html">Huyền huyễn</a></li>
+                          <li><a href="./list-stories.html">Kỳ huyễn</a></li>
+                          <li><a href="./list-stories.html">Đồng nhân</a></li>
+                          <li><a href="./list-stories.html">Canh kỵ</a></li>
+                          <li><a href="./list-stories.html" style="border: 0;">Nữ cường</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                          <li><a href="./list-stories.html">Đô thị</a></li>
+                          <li><a href="./list-stories.html">Võ hiệp</a></li>
+                          <li><a href="./list-stories.html">Quân sự</a></li>
+                          <li><a href="./list-stories.html">Linh dị</a></li>
+                          <li><a href="./list-stories.html" style="border: 0;">Đam mỹ</a></li>
+                        </ul>
+                      </div>
+                      <!-- <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p>
+                      <p class="col-4"><a href="#">Tiên hiệp</a></p> -->
+                    </div>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sắp xếp
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-item nav-link">Truyện con trai</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-item nav-link">Truyện con gái</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-item nav-link">Lịch sử</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-item nav-link">Thảo luận</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-item nav-link">Fanpage</a>
+                </li>
+              </ul>
+              <div class="navbar-nav ms-auto">
+                <a href="#" class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Đăng ký</a>
+                <a href="#" class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Đăng nhập</a>
+            </div>
+              <!-- <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form> -->
+            </div>
+        </div>
+    </nav>
+    </div>
+
+    <!-- ---------------------------BODY------------------------- -->
+    <div class="container-fluid content-story">
+        <p class="title-story">Ngã Hữu Chư Thiên Vạn</p>
+        <p class="name-author">Tác giả: <a href="#" style="color:#0277BD;text-decoration: none;">Bạch Phát Lang</a></p>
+        <p class="name-chapter">Chương 5: Vạn nhất ném đi mạng nhỏ làm thế nào</p>
+        <div class="container content-chapter">
+          <p id="check_size">Cái kia mộc kiếm vừa rơi xuống nhập trong nồi, không có có cái gì đặc biệt biến hóa, Bạch Tiểu Thuần khẽ di một tiếng, không cam lòng mở to mắt, cẩn thận nhìn chằm chằm vào mộc kiếm.</p>
+          <p id="check_size">Có thể đợi cả buổi, thủy chung không thấy có cái gì chuyện kỳ dị phát sinh, Bạch Tiểu Thuần hơi suy nghĩ một chút, mắt nhìn Quy văn nồi bên trên đường vân, lại nhìn một chút bếp lò bên trong mảnh gỗ tro tàn, như có điều suy nghĩ, quay người ra gian phòng, một lát sau khi trở về, trong tay đã hơn nhiều mấy khối cùng lúc trước bếp lò bên trong giống nhau mảnh gỗ.</p>
+          <p id="check_size">Cái này mảnh gỗ tại Phòng Bếp bên trong cũng không phải đặc biệt vật tầm thường, hắn hãy tìm rồi Trương Đại Bàn mới muốn đi một tí.</p>
+          <p id="check_size">Đem mảnh gỗ nhen nhóm, Bạch Tiểu Thuần lập tức chứng kiến Quy văn nồi bên trên đầu thứ nhất đường vân, lần nữa sáng lên, mà cái kia gỗ lửa cấp tốc thiêu đốt, dần dần dập tắt, Bạch Tiểu Thuần tâm thần khẽ động lúc, trong nồi mộc kiếm đột nhiên ngân quang chói mắt.</p>
+          <p id="check_size">Bạch Tiểu Thuần lui về phía sau vài bước, không bao lâu hào quang tiêu tán, hắn lập tức cảm nhận được một cỗ lăng lệ ác liệt chi ý từ trong nồi truyền ra.</p>
+          <p id="check_size">Hắn thở sâu, cẩn thận tới gần, thấy được trong nồi mộc kiếm, xuất hiện một đạo cùng Linh Mễ giống nhau đấy, chói mắt ngân văn, này văn đang từ từ ám đi, cuối cùng đã trở thành ám ngân sắc!</p>
+          <p id="check_size">Toàn bộ thân kiếm đều cùng lúc trước thoáng bất đồng, mặc dù hay vẫn là bằng gỗ, nhưng lại làm cho người ta một loại kim loại sắc bén chi ý, Bạch Tiểu Thuần hai mắt tỏa sáng, tiến lên cẩn thận đem cái thanh này mộc kiếm lấy ra, cảm giác nặng một ít, bắt được chỗ gần lúc, thậm chí có loại hàn mang bức người cảm giác.</p>
+          <p id="check_size">"Đã thành, cái này mộc kiếm thành công Luyện Linh một lần." Bạch Tiểu Thuần cuồng hỉ, cầm lấy mộc kiếm yêu thích không buông tay, lại nhìn một chút cái kia nồi nấu, suy nghĩ vật ấy nên xử trí như thế nào, cuối cùng quyết định liền để ở chỗ này, càng là như thế, lại càng là không có người để ý.</p>
+        </div>
+    </div>
+
+
+
+
+    <!-- --------------------------FOOTER------------------------- -->
+    <div class="footer-chapter">
+      <nav class="navbar navbar-expand-lg navbar-light background-navbar">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html" style="text-decoration:none; color:black"><i class="fa-solid fa-house-chimney border-icon"></i> Trang chủ</a>
+            </li>
+            <li class="nav-item dropup">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown12" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gear border-icon"></i> Màu sắc & font chữ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown12">
+                <li style="margin: 20px 0;" class="circle-color">
+                    <span style="font-size: 16px;line-height: 19px;" class="select-change">Màu sắc:</span>
+                    <!-- <a class="color-click color-curent" style="background: #E5E4DB;"></a>
+                    <a class="color-click" style="background: #F3E9C6;"></a>
+                    <a class="color-click" style="background: #E2EEE2;"></a>
+                    <a class="color-click" style="background: #E2EFF3;"></a>
+                    <a class="color-click" style="background: #F5E4E4;"></a>
+                    <a class="color-click" style="background: #111111;"></a> -->
+                    <label>
+                      <input type="radio" name="change_font">
+                      <span style="background: #E5E4DB;"></span>
+                    </label>   
+                    <label>
+                      <input type="radio" name="change_font" >
+                      <span style="background: #F3E9C6;"></span>
+                    </label>   
+                    <label>
+                      <input type="radio" name="change_font">
+                      <span style="background: #E2EEE2;"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="change_font">
+                      <span style="background: #E2EFF3;"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="change_font">
+                      <span style="background: #F5E4E4;"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="change_font">
+                      <span style="background: #111111;"></span>
+                    </label>
+                </li>
+                <li style="margin: 20px 0;" class="new-update" >
+                    <span style="font-size: 16px;line-height: 19px;" class="select-change">Font chữ:</span>
+                    <label>
+                      <input type="radio" name="change_font" value="roboto-font">
+                      <span style="padding:5px 14px;">Roboto</span>
+                    </label>   
+                    <label>
+                      <input type="radio" name="change_font" value="palatino-font">
+                      <span style="padding:5px 14px;">Palatino</span>
+                    </label>   
+                    <label>
+                      <input type="radio" name="change_font" value="times-font">
+                      <span style="padding:5px 14px;">Times</span>
+                    </label>
+                </li>
+                <li style="margin: 20px 0;">
+                    <span style="font-size: 16px;line-height: 19px;" class="select-change">Cỡ chữ:</span>
+                    <button class="round-change-sizes" id="decrease-font-size" style="padding: 0;background:none;">
+                      <i class="fa-solid fa-minus" style="color:#333333"></i>
+                    </button>
+                    <span style="margin: 0 16px;" id="font-size-current"></span>
+                    <button class="round-change-sizes" id="increase-font-size" style="padding: 0;background:none;">
+                      <i class="fa-solid fa-plus" style="color:#333333"></i>
+                    </button>
+                    <!-- <div class="round">
+                      <a id="decrease-font-size" style="padding: 0;"><i class="fa-solid fa-plus" style="color:#333333"></i></a>
+                    </div> -->
+                </li>
+                
+              </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav abs-center-x">
+          <li class="nav-item">
+            <a href="#" class="nav-link previous round"><i class="fa-solid fa-chevron-left"></i></a>
+          </li>
+          <li class="nav-item" style="margin: 0 10px;">
+            <select class="form-select" aria-label="example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link next round"><i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-triangle-exclamation border-icon"></i> Báo lỗi truyện</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-heart style-icon border-icon"></i> Theo dõi</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+      <!-- <div class="footer-left">
+        <p style="margin-right:40px"><a href="./index.html" style="text-decoration:none; color:black"><i class="fa-solid fa-house-chimney border-icon"></i> Trang chủ</a></p>
+        <p><i class="fa-solid fa-gear border-icon"></i> Màu sắc & font chữ</p>
+      </div>
+      <div class="footer-center">
+        <div style="height:100%; border: 1.5px dashed #999999;align-self: center;">
+          <a href="#" class="previous round"><i class="fa-solid fa-chevron-left"></i></a>
+        </div>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <div style="height:100%; border: 1.5px dashed #999999;align-self: center;">
+          <a href="#" class="next round"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p style="margin-right: 40px;"><i class="fa-solid fa-triangle-exclamation border-icon"></i> Báo lỗi truyện</p>
+        <p><i class="fa-solid fa-heart style-icon border-icon"></i> Theo dõi</p>
+      </div> -->
+    </div>
+
+
+
+    
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Đăng nhập</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-label="selected="false">Đăng ký</button>
+          </li>
+        </ul>
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <div class="form px-4 pt-5">
+
+              <input type="text" name="" class="form-control" placeholder="Email or Phone">
+
+              <input type="text" name="" class="form-control" placeholder="Password">
+              <button class="btn btn-dark btn-block">Login</button>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <div class="form px-4">
+
+              <input type="text" name="" class="form-control" placeholder="Name">
+
+              <input type="text" name="" class="form-control" placeholder="Email">
+
+              <input type="text" name="" class="form-control" placeholder="Phone">
+
+              <input type="text" name="" class="form-control" placeholder="Password">
+
+              <button class="btn btn-dark btn-block">Signup</button>
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>
