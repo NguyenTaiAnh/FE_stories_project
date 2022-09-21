@@ -77,6 +77,16 @@
   border: 1px solid #EF5350;
   color: #EF5350;   
 }
+.circle-color :checked + span:before {
+  content: "✔";
+  font-family: 'FontAwesome';
+  top: 5%;
+  left: 20%;
+  color: red;
+  position: absolute;
+
+}
+
 .circle-color [type="radio"][disabled] + span {
   background: #666666;
   color: #8d8a8a;
